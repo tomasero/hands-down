@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15705" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15501"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="App_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="136" height="54" alignment="left" textAlignment="center" numberOfLines="2" id="Dnd-Ys-YcR">
+                            <string key="text">Hands Down,
+Tomás</string>
+                        </label>
+                        <label width="136" height="26" alignment="left" text="Label" textAlignment="center" id="bKw-N6-l33"/>
+                        <slider width="1" alignment="left" value="35" minimum="35" maximum="70" steps="5" id="H9H-O0-sLB">
+                            <connections>
+                                <action selector="sliderAction:" destination="AgC-eL-Hgc" id="dbL-dQ-8ji"/>
+                            </connections>
+                        </slider>
+                        <label width="136" height="26" alignment="left" text="Val" textAlignment="center" id="GSe-O2-Ssk"/>
+                    </items>
+                    <connections>
+                        <outlet property="rssiVal" destination="GSe-O2-Ssk" id="FJK-An-WjU"/>
+                        <outlet property="textIn" destination="bKw-N6-l33" id="bz6-Lo-K87"/>
+                        <outlet property="valSlider" destination="H9H-O0-sLB" id="f8l-KH-Maf"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="53" y="391"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="620" y="293"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="App_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="293"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="Niz-AI-uX2">
+            <objects>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="App_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="-5"/>
+        </scene>
+    </scenes>
+</document>
