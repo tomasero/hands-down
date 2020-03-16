@@ -16,7 +16,7 @@
 Tomás</string>
                         </label>
                         <label width="136" height="26" alignment="left" text="Label" textAlignment="center" id="bKw-N6-l33"/>
-                        <slider width="1" alignment="left" continuous="YES" value="35" minimum="35" maximum="70" steps="7" id="H9H-O0-sLB">
+                        <slider width="1" alignment="left" continuous="YES" value="35" minimum="35" maximum="70" steps="10" id="H9H-O0-sLB">
                             <connections>
                                 <action selector="sliderAction:" destination="AgC-eL-Hgc" id="dbL-dQ-8ji"/>
                             </connections>

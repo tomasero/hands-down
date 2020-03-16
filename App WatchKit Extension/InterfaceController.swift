@@ -81,9 +81,12 @@ class InterfaceController: WKInterfaceController,CBCentralManagerDelegate,CBPeri
 
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         let device = (advertisementData as NSDictionary).object(forKey: CBAdvertisementDataLocalNameKey) as? NSString
+//        let e = (advertisementData as NSDictionary).object(forKey: CBAdvertisementDataServiceDataKey)
+//        let e = (advertisementData as NSDictionary).object(forKey: CBAdvertisementDataServiceDataKey)
         
         print(device ?? "None")
-        print(advertisementData)
+        print(RSSI)
+//        print(advertisementData)
         
 //        let NAME = "Master Of All Pleasure's AirPods"
         if (device == "nil"){
@@ -99,7 +102,7 @@ class InterfaceController: WKInterfaceController,CBCentralManagerDelegate,CBPeri
             self._peripheral.delegate = self
             
             // Connect to the perhipheral proper
-            manager.connect(peripheral, options: nil)
+//            manager.connect(peripheral, options: nil)
             debugPrint("Found Bean.")
             textIn.setText("Connected")
 //            startRSSIUpdate()
