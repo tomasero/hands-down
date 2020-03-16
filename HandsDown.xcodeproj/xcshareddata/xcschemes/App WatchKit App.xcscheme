@@ -28,9 +28,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0ABD8DF32417EB140024B22F"
-               BuildableName = "App.app"
-               BlueprintName = "App"
+               BlueprintIdentifier = "0ABD8DD72417E9230024B22F"
+               BuildableName = "HandsDown.app"
+               BlueprintName = "HandsDown"
                ReferencedContainer = "container:HandsDown.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
