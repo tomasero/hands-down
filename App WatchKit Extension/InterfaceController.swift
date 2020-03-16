@@ -81,8 +81,10 @@ class InterfaceController: WKInterfaceController,CBCentralManagerDelegate,CBPeri
 
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         let device = (advertisementData as NSDictionary).object(forKey: CBAdvertisementDataLocalNameKey) as? NSString
-//        print(advertisementData)
+        
         print(device ?? "None")
+        print(advertisementData)
+        
 //        let NAME = "Master Of All Pleasure's AirPods"
         if (device == "nil"){
              //print(device, RSSI)
